@@ -9,6 +9,7 @@ import json
 
 #Instead of tg_key insert your API token from BotFather
 bot = Bot(token=os.getenv('tg_key'))
+
 open_weather_token = os.getenv('weather_key')
 dp = Dispatcher(bot)
 
