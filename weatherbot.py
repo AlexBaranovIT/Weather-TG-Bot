@@ -11,6 +11,7 @@ import json
 bot = Bot(token=os.getenv('tg_key'))
 
 open_weather_token = os.getenv('weather_key')
+
 dp = Dispatcher(bot)
 
 keep_alive()
