@@ -19,19 +19,19 @@ keep_alive()
 
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message):
-  await message.reply('Привет! Напиши мне название города и я пришлю сводку погоды!')
+  await message.reply('HI! Send me a city name and I will send weather info about this city')
 
 
 @dp.message_handler()
 async def get_weather(message: types.Message):
   code_to_smile = {
-        "Clear": "Ясно \U00002600",
-        "Clouds": "Облачно \U00002601",
-        "Rain": "Дождь \U00002614",
-        "Drizzle": "Дождь \U00002614",
-        "Thunderstorm": "Гроза \U000026A1",
-        "Snow": "Снег \U0001F328",
-        "Mist": "Туман \U0001F32B"
+        "Clear": "Clear \U00002600",
+        "Clouds": "Cloudy \U00002601",
+        "Rain": "Rain \U00002614",
+        "Drizzle": "Little rain \U00002614",
+        "Thunderstorm": "Storm \U000026A1",
+        "Snow": "Snow \U0001F328",
+        "Mist": "Fog \U0001F32B"
     }
   try:
         r = requests.get(
