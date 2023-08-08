@@ -28,10 +28,10 @@ async def get_weather(message: types.Message):
         "Clear": "Clear \U00002600",
         "Clouds": "Cloudy \U00002601",
         "Rain": "Rain \U00002614",
-        "Drizzle": "Little rain \U00002614",
-        "Thunderstorm": "Storm \U000026A1",
+        "Drizzle": "Drizzle \U00002614",
+        "Thunderstorm": "Thunderstorm \U000026A1",
         "Snow": "Snow \U0001F328",
-        "Mist": "Fog \U0001F32B"
+        "Mist": "Mist \U0001F32B"
     }
   try:
         r = requests.get(
@@ -46,7 +46,7 @@ async def get_weather(message: types.Message):
         if weather_description in code_to_smile:
             wd = code_to_smile[weather_description]
         else:
-            wd = "Посмотри в окно, не пойму что там за погода!"
+            wd = "Can't get information. Look out the window!"
 
         humidity = data["main"]["humidity"]
         pressure = data["main"]["pressure"]
@@ -57,10 +57,10 @@ async def get_weather(message: types.Message):
             data["sys"]["sunrise"])
 
         await message.reply(f"***{datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}***\n"
-              f"Погода в городе: {city}\nТемпература: {cur_weather}C° {wd}\n"
-              f"Влажность: {humidity}%\nДавление: {pressure} мм.рт.ст\nВетер: {wind} м/с\n"
-              f"Восход солнца: {sunrise_timestamp}\nЗакат солнца: {sunset_timestamp}\nПродолжительность дня: {length_of_the_day}\n"
-              f"***Хорошего дня!***"
+              f"Weather in the city: {city}\nTemperature: {cur_weather}C° {wd}\n"
+              f"Humidity: {humidity}%\nPressure: {pressure} мм.рт.ст\nWind: {wind} м/с\n"
+              f"Sunrise: {sunrise_timestamp}\nSunset: {sunset_timestamp}\nLength of the day: {length_of_the_day}\n"
+              f"***Have a good one!***"
               )
 
   except:
