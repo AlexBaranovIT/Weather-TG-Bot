@@ -64,7 +64,7 @@ async def get_weather(message: types.Message):
               )
 
   except:
-        await message.reply("\U00002620 Проверьте название города \U00002620")
+        await message.reply("\U00002620 Check city name \U00002620")
 
 
 executor.start_polling(dp)
