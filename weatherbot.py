@@ -20,7 +20,7 @@ keep_alive()
 
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message):
-    await message.reply('HI! Send me a city name and I will send weather info about this city')
+  await message.reply('HI! Send me a city name and I will send weather info about this city')
 
 
 @dp.message_handler()
