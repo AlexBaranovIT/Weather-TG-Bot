@@ -3,6 +3,7 @@ from threading import Thread
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
     return "Server is Alive"
