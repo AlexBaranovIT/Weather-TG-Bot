@@ -12,7 +12,7 @@ bot = Bot(token=os.getenv('tg_key'))
 
 #Instead of weather_key insert your API token from OpenWeather
 open_weather_token = os.getenv('weather_key')
-
+ 
 dp = Dispatcher(bot)
 
 keep_alive()
